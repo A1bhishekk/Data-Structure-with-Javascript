@@ -5,12 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array,Traversing & Accessing</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: rgb(247, 12, 153);
+        }
+        
+    </style>
 </head>
 <body>
+    <h1>Array,Traversing & Accessing</h1>
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button><br>
     <script>
         let data=[9,45,2,8,45,2,7,78,0,11,41,77];
         for (let i = 0; i <data.length; i++) {
             document.write(`Array ${i} element is ${data[i]} <br/>`);
+        }
+
+        const  getElement=()=>{
+            let el=document.getElementById('element').value;
+            if(el< data.length && typeof parseInt(el)==='number'){
+                alert(data[el])
+            }else{
+                alert('please enter valid value')
+            }
         }
     </script>
 </body>
